@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using System.Diagnostics;
 
 namespace Kursovoi
 {
@@ -24,6 +26,33 @@ namespace Kursovoi
         {
             InitializeComponent();
             Logger.SaveLog($"[{DateTime.Now.ToString(new CultureInfo("en-US"))}] aboutDW Startup");
+
+            //try
+            //{
+
+
+            //    MemoryStream ms = new MemoryStream(UTF8Encoding.Default.GetBytes(rtf));
+            //    About.Selection.Load(ms, DataFormats.Rtf);
+
+            //}
+            //catch (IOException ex)
+            //{
+            //    Logger.SaveLog($"[{DateTime.Now.ToString(new CultureInfo("en-US"))}] aboutDW ${ex.Message} ${ex.Source} ");
+            //}
         }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            StreamReader sr = new StreamReader($"{new Constants.Constants().APP_PATH}\\data\\about.bin");
+
+            string rtf = await sr.ReadToEndAsync();
+
+            spinnerSetup.Spin = false;
+            spinnerSetup.Visibility = Visibility.Collapsed;
+
+            MemoryStream ms = new MemoryStream(UTF8Encoding.Default.GetBytes(rtf));
+            About.Selection.Load(ms, DataFormats.Rtf);
+        }
+
     }
 }

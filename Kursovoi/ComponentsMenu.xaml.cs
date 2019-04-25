@@ -50,7 +50,7 @@ namespace Kursovoi
 
             PropNames.Visibility = Visibility.Hidden;
 
-            if (info[0]["comp_proporties"] != null)
+            if (info[0]["comp_proporties"].ToString() != "")
             {
                 PropNames.Visibility = Visibility.Visible;
                 string[] props = info[0]["comp_proporties"].ToString().Split('|');

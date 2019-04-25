@@ -28,13 +28,14 @@ namespace Kursovoi
             InitializeComponent();
             Logger.SaveLog($"[{DateTime.Now.ToString(new CultureInfo("en-US"))}] aboutProgLang Startup");
             cmp = new ComponentsInfo();
-                Dictionary<int, Dictionary<string, object>> components = cmp.Select("Language");
-                foreach (var comp in components)
-                    SelectLang.Items.Add(comp.Value["lang_name"]);
+            Dictionary<int, Dictionary<string, object>> components = cmp.Select("Language");
+            foreach (var comp in components)
+                SelectLang.Items.Add(comp.Value["lang_name"]);
+
+            MessageBox.Show("Тут вы можете посмотреть все языки программирования, которые используются в Adobe Dreamweaver.", "Справка", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        //люби как солнце, как вечно грустная весна, не отпускай меня
-        //лишь до утра
+        //люблю тебя <3
 
         private void SelectLang_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

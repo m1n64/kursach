@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Kursovoi.Modules;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +15,10 @@ namespace Kursovoi
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            new MainWindow().Show();
+            if (Regedit.GetValue("firstrstart") == null) Regedit.SetValue("firststart", "0");
+        }
     }
 }
