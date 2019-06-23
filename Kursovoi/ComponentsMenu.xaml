@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursovoi"
         mc:Ignorable="d"
-        Title="Информация по компонентам в программе Adobe Dreamweaver" Height="672" Width="1297.5" ResizeMode="NoResize" Background="#FF303030">
+        Title="Информация по компонентам в программе Adobe Dreamweaver" Height="672" Width="1297.5" ResizeMode="NoResize" Background="#FF303030" Icon="icon.png">
 
     <Window.Resources>
 
@@ -582,7 +582,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Image x:Name="PicComponent" HorizontalAlignment="Left" Height="492.5" Margin="10,87,0,0" VerticalAlignment="Top" Width="558" StretchDirection="DownOnly" Stretch="Fill"/>
+        <Image x:Name="PicComponent" HorizontalAlignment="Left" Height="492.5" Margin="10,87,0,0" VerticalAlignment="Top" Width="558" Stretch="Fill" StretchDirection="DownOnly"/>
         <Label Content="" HorizontalAlignment="Right" Margin="0,0,973.42,598.04" VerticalAlignment="Bottom" Background="#00000000" FontWeight="Bold" Foreground="White" Name="CompName"/>
         <ListBox x:Name="PropNames" HorizontalAlignment="Left" Height="127" Margin="610.833,479.5,0,0" VerticalAlignment="Top" Width="645.667" Background="#FF6A6A6A" Foreground="#FFFBFBFB"/>
     </Grid>

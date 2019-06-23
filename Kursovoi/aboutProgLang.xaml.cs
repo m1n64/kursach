@@ -32,7 +32,15 @@ namespace Kursovoi
             foreach (var comp in components)
                 SelectLang.Items.Add(comp.Value["lang_name"]);
 
-            MessageBox.Show("Тут вы можете посмотреть все языки программирования, которые используются в Adobe Dreamweaver.", "Справка", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (Regedit.GetValue("firststart").ToString() == "0")
+            {
+                MessageBox.Show("Тут вы можете посмотреть все языки программирования, которые используются в Adobe Dreamweaver.", "Справка", MessageBoxButton.OK, MessageBoxImage.Information);
+                if (Regedit.GetValue("tmp").ToString() == "3") Regedit.SetValue("firststart", "1");
+                else
+                {
+                    Regedit.SetValue("tmp", (int.Parse(Regedit.GetValue("tmp").ToString()) + 1).ToString());
+                }
+            }
         }
 
         //люблю тебя <3
