@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursovoi"
         mc:Ignorable="d"
-        Title="Информация по компонентам в программе Adobe Dreamweaver" Height="672" Width="1297.5" ResizeMode="NoResize" Background="#FF303030" Icon="icon.png">
+        Title="Информация по компонентам в программе Adobe Dreamweaver" Height="672" Width="1297.5" ResizeMode="NoResize" Background="#FF303030" Icon="icon.png" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
 

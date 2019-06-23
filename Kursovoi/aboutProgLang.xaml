@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kursovoi"
         mc:Ignorable="d"
-        Title="О языках программирования" Height="510" Width="897.5" ResizeMode="NoResize" Background="#FF303030" Icon="icon.png">
+        Title="О языках программирования" Height="510" Width="897.5" ResizeMode="NoResize" Background="#FF303030" Icon="icon.png" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
 
