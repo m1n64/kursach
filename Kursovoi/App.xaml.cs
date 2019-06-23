@@ -18,7 +18,8 @@ namespace Kursovoi
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             new MainWindow().Show();
-            if (Regedit.GetValue("firstrstart") == null) Regedit.SetValue("firststart", "0");
+            if (Regedit.GetValue("firststart") == null) Regedit.SetValue("firststart", "0");
+            if (Regedit.GetValue("tmp") == null) Regedit.SetValue("tmp", "0");
         }
     }
 }

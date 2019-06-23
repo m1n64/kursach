@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Kursovoi"
         mc:Ignorable="d"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
-        Title="AboutDW" Height="695.167" Width="798.667" Background="#FF383838" ResizeMode="NoResize" Loaded="Window_Loaded">
+        Title="О программе" Height="695.167" Width="798.667" Background="#FF383838" ResizeMode="NoResize" Loaded="Window_Loaded" Icon="icon.png">
 
     <Window.Resources>
         <Style TargetType="{x:Type Button}">

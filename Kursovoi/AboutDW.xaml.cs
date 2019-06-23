@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
 using System.Diagnostics;
+using Kursovoi.Modules;
 
 namespace Kursovoi
 {
@@ -27,18 +28,15 @@ namespace Kursovoi
             InitializeComponent();
             Logger.SaveLog($"[{DateTime.Now.ToString(new CultureInfo("en-US"))}] aboutDW Startup");
 
-            //try
-            //{
-
-
-            //    MemoryStream ms = new MemoryStream(UTF8Encoding.Default.GetBytes(rtf));
-            //    About.Selection.Load(ms, DataFormats.Rtf);
-
-            //}
-            //catch (IOException ex)
-            //{
-            //    Logger.SaveLog($"[{DateTime.Now.ToString(new CultureInfo("en-US"))}] aboutDW ${ex.Message} ${ex.Source} ");
-            //}
+            if (Regedit.GetValue("firststart").ToString() == "0")
+            {
+                MessageBox.Show("Здесь содержиться информация о самой программе Adobe Dreamweaver.", "Справка", MessageBoxButton.OK, MessageBoxImage.Information);
+                if (Regedit.GetValue("tmp").ToString() == "3") Regedit.SetValue("firststart", "1");
+                else
+                {
+                    Regedit.SetValue("tmp", (int.Parse(Regedit.GetValue("tmp").ToString()) + 1).ToString());
+                }
+            }
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
